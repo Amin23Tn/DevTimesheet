@@ -10,7 +10,7 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: 'main']],
                 doGenerateSubmoduleConfigurations: false,gitTool: 'Default',
                 submoduleCfg: [], userRemoteConfigs: [[ 
-                url: 'https://github.com/azerty11xd/Esprit.git']]])
+                url: 'https://github.com/Amin23Tn/DevTimesheet.git']]])
             }
         }
 		stage('Clean Tests Stage') {
@@ -32,7 +32,7 @@ pipeline {
 				stage('Deploy to Nexus') {
 					steps {
 						script{
-							bat "mvn deploy -DskipTests=true "
+							bat "mvn clean package deploy:deploy-file -DgroupId=tn.esprit.spring -DartifactId=Timesheet-spring-boot-core-data-jpa-mvc-REST-1 -Dversion=1.0 -DgeneratePom=true -Dpackaging=jar -DrepositoryId=deploymentRepo -Durl=http://localhost:8081/repository/maven-releases/ -Dfile=target/Timesheet-spring-boot-core-data-jpa-mvc-REST-1-1.0.jar "
 						}
 					}
 				}
