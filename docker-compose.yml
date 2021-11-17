@@ -23,7 +23,7 @@ services:
    # volumes:
     #  - my-db:/var/lib/mysql
   applicationService:
-    build: C:\Users\bureau\.jenkins\jobs\DevPipeline\workspace
+    build: C:/Users/bureau/.jenkins/jobs/DevPipeline/workspace
     image: myapp
     ports:
       - "8090:8090"
