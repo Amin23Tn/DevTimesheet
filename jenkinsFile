@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        EMAIL_RECIPIENTS = 'maleksaadani90@gmail.com'
+        EMAIL_RECIPIENTS = 'mohamedamine.belaid1@esprit.tn'
 		def mvnHome = tool 'Maven'
     }
     stages {
@@ -49,18 +49,7 @@ pipeline {
 				}
 			}
 		}
-		stage('docker') {
-					steps {
-						script{
-  
- 
-                             bat "docker-compose down"
-                             bat "docker-compose up --build -d"
-                            
-                            
-						}    
-                        }   
-	}
+		
      
     }
     post { 
