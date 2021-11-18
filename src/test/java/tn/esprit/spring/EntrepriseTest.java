@@ -33,7 +33,7 @@ private static final Logger l = LogManager.getLogger(EntrepriseServiceImpl.class
 	 public void contextLoads() {
 		
 	}
-	/*@Test
+	@Test
 	public void testAjouterEntreprise() {
 		 
 	
@@ -41,7 +41,7 @@ private static final Logger l = LogManager.getLogger(EntrepriseServiceImpl.class
 		 assertThat(a).isGreaterThan(0);
 			l.info("idEntreprise: " + a);
 	
-	}*/
+	}
 	
 	/*@Test
 	public void verifIdEntreprise() {
